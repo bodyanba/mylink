@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap')
+
+$color-primary: #36D9FF
+$color-danger: #FF2773
+$color-tes: #FD8093
+$color-gray: #F0F2F2
+
+body
+	color: #424B4C
+	font-weight: 300
+	font-family: 'Lato', sans-serif
+
+* 
+	outline: none !important
+
+img
+	max-width: 100%
+
+a 
+	transition: .3s
+	&:hover 
+		text-decoration: none
+
+b, strong 
+	font-weight: 900
+
+main 
+	overflow: hidden
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+	line-height: 1
+	font-weight: 900
+
+h1, .h1
+	font-size: 36px
+h2, .h2
+	font-size: 30px
+
+.fz-54
+	font-size: 54px
+	line-height: 1
+	@media (max-width: 991.98px)
+		font-size: 23px
+.fz-46
+	font-size: 46px
+	line-height: 1
+	@media (max-width: 991.98px)
+		font-size: 30px
+.fz-36
+	font-size: 36px
+	line-height: 1
+.fz-23
+	font-size: 23px
+.fz-13
+	font-size: 13px
+
+.container
+	@media (min-width: 1200px)
+		max-width: 1000px
+
+.row-0:not(.no-gutters)
+	margin-left: -7.5px
+	margin-right: -7.5px
+	> [class*="col"]
+		padding-left: 7.5px
+		padding-right: 7.5px
+
+.row-1:not(.no-gutters)
+	margin-left: -21px
+	margin-right: -21px
+	> [class*="col"]
+		padding-left: 21px
+		padding-right: 21px
+
+@media (min-width: 768px)
+	.row-2:not(.no-gutters)
+		margin-left: -45px
+		margin-right: -45px
+		> [class*="col"]
+			padding-left: 45px
+			padding-right: 45px
+
+.btn
+	border-radius: 7px
+	padding: 3.5px 13px
+	transition: .3s
+	&[class*="btn-outline"]
+		border-radius: 0
+		padding: 0 10.5px
+	&:not([class*="btn-outline"])
+		border: 0
+.btn-lg 
+	font-size: 20px
+	text-transform: uppercase
+.btn-danger
+	background: $color-danger
+.btn-outline-secondary
+	border-radius: 0
+	border-color: #707070
+
+.nav-link
+	color: inherit !important
+	&:hover 
+		opacity: 0.6
+
+.text-primary
+	color: $color-primary !important
+.text-danger
+	color: $color-danger !important
+
+.bg-gray
+	background-color: $color-gray
+
+.navbar
+	color: #262728
+.navbar-toggler
+	padding: 0
+	border: 0
+
+.section
+	min-height: 334px
+	padding-top: 46px
+	padding-bottom: 46px
+	display: flex 
+	flex-direction: column 
+	justify-content: center
+
+.section-bunner
+	padding-top: 116px
+	padding-bottom: 116px
+
+.section-1
+	padding-top: 79px
+	padding-bottom: 14px
+
+.section-2
+	padding-top: 65px
+	padding-bottom: 58px
+
+.section-3
+	padding-top: 39px
+	padding-bottom: 50px
+
+.footer 
+	color: #fff
+	padding-top: 33px
+	padding-bottom: 68px
+	background-color: #232626
+
+.text
+	position: relative
+	margin: 0 auto
+	padding-top: 5px
+	max-width: 275px
+	text-align: center
+	margin-top: 47px
+	margin-bottom: 44px
+	&:before 
+		content: ''
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		width: 20px
+		border-top: 1px solid
+
+.box
+	padding: 12px
+	border-radius: 5px
+	margin-top: 33px
+	background-color: $color-gray
+	position: relative
+	.ava 
+		width: 82px
+		height: 82px
+		border-radius: 10px
+		background-color: $color-primary
+	.tes
+		color: #fff
+		font-size: 18px
+		padding: 7.5px 5px
+		min-width: 42px
+		position: absolute
+		top: -10px
+		left: -10px
+		border-radius: 100px
+		background-color: $color-tes
+
+
+@media (max-width: 575.98px)
+	.section-3
+		overflow: auto
+		.price-table
+			margin-left: -15px
+			margin-right: -15px
+			padding: 15px
+
+.price-table
+	position: relative
+	min-width: 540px
+	header
+		.price-header
+			&:before 
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				width: 231.25px
+				background-color: #fff
+				box-shadow: 12px 12px 144px rgba(205, 205, 205, .54)
+				border-radius: 5px
+				@media (max-width: 1199.98px)
+					width: 221.25px
+				@media (max-width: 991.98px)
+					width: 161.25px
+				@media (max-width: 767.98px)
+					width: 116.25px
+			.price-head
+				height: 100%
+				font-size: 16px
+				line-height: 1
+				padding: 18px 25px 0
+				position: relative
+				@media (min-width: 992px)
+					font-size: 23px
+				@media (max-width: 991.98px)
+					padding: 15px 15px 0
+	section
+		margin-top: 10px
+	.price-row
+		&:nth-child(odd)
+			background-color: #F7F8F8
+			.price-row-item-2
+				background-color: #F7F8F8
+		&:nth-child(2)
+			border-top-right-radius: 0
+		&:first-child 
+			.price-row-item-1
+				border-top-left-radius: 3px
+		&:last-child 
+			.price-row-item-1
+				border-bottom-left-radius: 3px
+	.price-row-item-1
+		line-height: 1.2
+		padding: 6px 11px
+		border-left: 3px solid $color-danger
+	.price-row-item-2
+		height: 100%
+		font-size: 0
+		display: flex
+		justify-content: center
+		&.check
+			&:before 
+				content: ''
+				display: inline-block
+				width: 24px
+				min-height: 24px
+				background: url(../img/check.svg) center center no-repeat
+				background-size: 24spx
+			&.muted 
+				filter: grayscale(100)
+				opacity: .5
+
+.price-section
+	margin-top: -10px
+	+ .price-section
+		margin-top: 40px
+
+.static
+	position: static
+
+
+
